@@ -1,0 +1,30 @@
+/* blog-detail.component.css */
+
+.container {
+    max-width: 800px;
+  }
+  
+  .card {
+    margin-bottom: 20px;
+  }
+  
+  .card-title {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .card-subtitle {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 15px;
+  }
+  
+  .card-text {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+  .btn-primary {
+    margin-top: 20px;
+  }
+  

@@ -1,0 +1,15 @@
+body {
+    background-color: #f8f9fa;
+  }
+  .jumbotron {
+    background-color: #343a40;
+    color: #fff;
+    padding: 100px;
+    margin-bottom: 0;
+  }
+  .main-content {
+    padding: 50px;
+  }
+  .main-content img {
+    max-width: 100%;
+  }

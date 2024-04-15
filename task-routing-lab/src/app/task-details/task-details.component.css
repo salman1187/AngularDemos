@@ -1,0 +1,35 @@
+/* task-details.component.css */
+
+.container {
+    max-width: 600px;
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 7px 7px 0 0;
+  }
+  
+  .card-title {
+    margin-bottom: 0;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .card-footer {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0 0 7px 7px;
+  }
+  

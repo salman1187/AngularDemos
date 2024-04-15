@@ -1,0 +1,19 @@
+<!-- task-details.component.html -->
+
+<div class="container mt-5">
+    <div class="card">
+      <div class="card-header">
+        <h2 class="card-title">{{ task?.title }}</h2>
+      </div>
+      <div class="card-body">
+        <p class="card-text"><strong>Description:</strong> {{ task?.description }}</p>
+        <p class="card-text"><strong>Due Date:</strong> {{ task?.dueDate | date: 'longDate' }}</p>
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-primary me-2" routerLink="/editTask/{{task?.taskId}}" >Edit Task</button>
+        <button class="btn btn-danger me-2" (click) = "deleteTask()" >Delete Task</button>
+        <a class="btn btn-secondary" routerLink="/tasks">Back to Home</a>
+      </div>
+    </div>
+  </div>
+  

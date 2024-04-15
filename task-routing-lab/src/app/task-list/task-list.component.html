@@ -1,0 +1,28 @@
+<!-- app.component.html -->
+
+<div class="container mt-5">
+    <h1 class="mb-4 d-inline-block">All Tasks</h1>
+    <button class="btn btn-success float-end" routerLink="/editTask">Create New Task</button>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Due Date</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let task of allTasks">
+          <td>{{ task.title }}</td>
+          <td>
+            {{ task.dueDate | date: 'longDate' }} 
+            <span [ngClass]="{ 'text-danger': getTimeLeft(task).overdue }">
+              ({{ getTimeLeft(task).timeLeft }})
+            </span>
+          </td>
+          <td><button class="btn btn-primary" routerLink="/task/{{task.taskId}}" >View Details</button></td>
+        </tr>        
+      </tbody>
+    </table>
+  </div>
+  

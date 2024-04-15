@@ -1,0 +1,2 @@
+<app-cart [cartItems]="cart" (itemRemoved)="removeItemFromCart($event)"></app-cart>
+<app-product-list [products] = "products" (ProductAdded)="addItemToCart($event)" ></app-product-list>
