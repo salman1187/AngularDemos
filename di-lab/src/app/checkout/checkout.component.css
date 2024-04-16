@@ -1,0 +1,22 @@
+.card {
+    border: none;
+  }
+  
+  .cart-item {
+    margin-bottom: 10px;
+  }
+  
+  .total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .total h6 {
+    margin: 0;
+  }
+  
+  .total-cost {
+    font-size: 1.25rem;
+  }
+  

@@ -14,6 +14,7 @@ import { ProductService } from '../Services/product.service';
 export class AddToCartComponent {
   productId: number = 0;
   quantity: number = 0;
+  product!: IProduct;
 
   constructor(private route: ActivatedRoute, private cartService: CartService, private productService: ProductService) { }
 
@@ -24,6 +25,12 @@ export class AddToCartComponent {
     if (pid !== null && qty !== null) {
         this.productId = parseInt(pid, 10);
         this.quantity = parseInt(qty, 10);
+
+
+        this.productService.getProductbyID(this.productId).subscribe((p) => {
+          this.product = p;
+        })
+
         //call cartService.addToCart
         this.cartService.addToCart(this.productId, this.quantity).subscribe((response) => {
           console.log("Item added to cart:", this.productId);

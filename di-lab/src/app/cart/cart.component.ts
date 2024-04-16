@@ -4,11 +4,12 @@ import { IProduct } from '../Models/product';
 import { CartService } from '../Services/cart.service';
 import { ProductService } from '../Services/product.service';
 import { CommonModule } from '@angular/common';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterOutlet, RouterLink, RouterLinkActive],
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.css'
 })

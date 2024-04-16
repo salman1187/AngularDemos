@@ -1,53 +1,17 @@
-/* Style for the outer div */
 .cart-container {
-    width: 100%;
-  }
-  
-  /* Style for each cart item */
-  .cart-item {
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 15px;
-  }
-  
-  /* Style for product name */
-  .product-name {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 5px;
-  }
-  
-  /* Style for quantity */
-  .quantity {
-    font-size: 14px;
-    color: #666;
-  }
-  
-  /* Hover effect */
-  .cart-item:hover {
-    background-color: #fff;
-    transition: background-color 0.3s ease;
-  }
+  max-width: 600px; /* Limiting container width */
+  margin: 0 auto; /* Centering container horizontally */
+  padding: 20px; /* Adding padding for spacing */
+}
 
-  /* Style for the checkout button */
+.cart-item {
+  margin-bottom: 10px; /* Adding margin between each cart item */
+  background-color: #f8f9fa; /* Setting background color */
+  padding: 10px; /* Adding padding for spacing */
+}
+
 .checkout-button {
-    display: block;
-    width: 100%;
-    padding: 12px 20px;
-    margin-top: 20px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  /* Hover effect for the button */
-  .checkout-button:hover {
-    background-color: #0056b3;
-  }
-  
+  display: block; /* Make button a block element */
+  margin: 20px auto; /* Centering button horizontally with margin */
+  width: 200px; /* Setting fixed width for button */
+}
