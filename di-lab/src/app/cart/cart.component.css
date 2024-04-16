@@ -1,0 +1,53 @@
+/* Style for the outer div */
+.cart-container {
+    width: 100%;
+  }
+  
+  /* Style for each cart item */
+  .cart-item {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 15px;
+  }
+  
+  /* Style for product name */
+  .product-name {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  /* Style for quantity */
+  .quantity {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  /* Hover effect */
+  .cart-item:hover {
+    background-color: #fff;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Style for the checkout button */
+.checkout-button {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect for the button */
+  .checkout-button:hover {
+    background-color: #0056b3;
+  }
+  

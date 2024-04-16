@@ -1,0 +1,8 @@
+<div class="cart-container">
+  <div *ngFor="let item of cartItemsWithProducts" class="cart-item">
+    <div class="product-name">{{ item.product.name }}</div>
+    <div class="quantity">Quantity: {{ item.quantity }}</div>
+    <!-- Display other product details as needed -->
+  </div>
+  <button class="checkout-button">Checkout</button>
+</div>

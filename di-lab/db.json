@@ -1,0 +1,63 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Laptop",
+      "description": "15.6-inch Full HD Laptop, Intel Core i7, 16GB RAM, 512GB SSD, Windows 10",
+      "price": 999.99,
+      "brand": "ExampleBrand",
+      "category": "Electronics"
+    },
+    {
+      "id": "2",
+      "name": "Smartphone",
+      "description": "6.5-inch Smartphone, 128GB Storage, Quad Camera, Android 11",
+      "price": 499.99,
+      "brand": "TechCo",
+      "category": "Electronics"
+    },
+    {
+      "id": "3",
+      "name": "Running Shoes",
+      "description": "Men's Running Shoes, Lightweight, Breathable Mesh, Cushioned Sole",
+      "price": 79.99,
+      "brand": "SportyGear",
+      "category": "Clothing"
+    },
+    {
+      "id": "4",
+      "name": "Coffee Maker",
+      "description": "12-Cup Programmable Coffee Maker, Stainless Steel, Auto Shut-Off",
+      "price": 49.99,
+      "brand": "HomeTech",
+      "category": "Appliances"
+    }
+  ],
+  "cart": [
+    {
+      "id": "0253",
+      "productId": 1,
+      "quantity": 1
+    },
+    {
+      "id": "057d",
+      "productId": 2,
+      "quantity": 4
+    },
+    {
+      "id": "",
+      "productId": 4,
+      "quantity": 5
+    },
+    {
+      "id": "",
+      "productId": 3,
+      "quantity": 10
+    },
+    {
+      "id": "",
+      "productId": 1,
+      "quantity": 6
+    }
+  ]
+}
