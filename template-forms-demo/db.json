@@ -1,0 +1,24 @@
+{
+  "students": [
+    {
+      "id": 0,
+      "name": "Lana",
+      "email": "ldr@gmail.com",
+      "mobile": "988",
+      "gender": "female",
+      "subscribe": true,
+      "course": ".NET",
+      "dob": "2024-04-15"
+    },
+    {
+      "id": 1,
+      "name": "Ruturaj",
+      "email": "captain@csk.com",
+      "mobile": "6782",
+      "gender": "male",
+      "subscribe": true,
+      "course": "Angular",
+      "dob": "2024-04-03"
+    }
+  ]
+}

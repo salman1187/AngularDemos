@@ -1,0 +1,1 @@
+export const apirUrl = "http://localhost:3000"
