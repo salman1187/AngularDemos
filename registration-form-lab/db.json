@@ -1,0 +1,34 @@
+{
+  "employees": [
+    {
+      "id": "1",
+      "name": "Joji",
+      "email": "joji@gmail.com",
+      "organization": "88rising",
+      "workshops": [
+        "Angular Basics",
+        "Advanced TypeScript"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Sumanth",
+      "email": "sumanth@gmail.com",
+      "organization": "cimpress",
+      "workshops": [
+        "React Fundamentals",
+        "Node.js Workshop"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "vibhuti",
+      "email": "vib@gmail.com",
+      "organization": "Oracle",
+      "workshops": [
+        "UI/UX Design",
+        "React Fundamentals"
+      ]
+    }
+  ]
+}

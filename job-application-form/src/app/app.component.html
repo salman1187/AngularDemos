@@ -1,0 +1,39 @@
+<div class="container mt-5">
+  <h2>Job Application Form</h2>
+
+  <!-- {{successMessage | json}} -->
+  <div *ngIf="successMessage" class="alert alert-success mt-3">
+    Form submitted successfully!
+  </div>
+
+  <form (ngSubmit)="onSubmit()" #applicantForm="ngForm">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control" [class.is-invalid]="nameInput.invalid && nameInput.touched" id="name" name="name" [(ngModel)]="applicant.name" #nameInput="ngModel" required>
+      <small *ngIf="nameInput.invalid && nameInput.touched" class="text-danger">Name is mandatory!</small>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label> 
+      <input type="email" #emailInput="ngModel" class="form-control" [class.is-invalid]="emailInput.invalid && emailInput.touched"  id="email" name="email" [(ngModel)]="applicant.email" required email>
+      <div *ngIf="emailInput.invalid && emailInput.errors?.['email'] && emailInput.touched" class="text-danger">Invalid email format.</div>
+      <div *ngIf="emailInput.invalid && emailInput.errors?.['required'] && emailInput.touched" class="text-danger">Email is required.</div>
+    </div>
+    <div class="mb-3">
+      <label for="phone" class="form-label">Phone (format: +91-XXXXXXXXXX)</label>
+      <input type="tel" class="form-control" [class.is-invalid]="phoneInput.invalid && phoneInput.touched" id="phone" name="phone" [(ngModel)]="applicant.phone" #phoneInput="ngModel" required pattern="^\+\d{2}-\d{10}$">
+      <small *ngIf="phoneInput.invalid && phoneInput.touched" class="text-danger">Phone must be in the format: +91-XXXXXXXXXX</small>
+
+    </div>
+    <div class="mb-3">
+      <label for="skills" class="form-label">Skills</label>
+      <textarea class="form-control" [class.is-invalid]="skillsInput.invalid && skillsInput.touched" id="skills" name="skills" [(ngModel)]="applicant.skills" #skillsInput="ngModel" required></textarea>
+      <small *ngIf="skillsInput.invalid && skillsInput.touched" class="text-danger">Skills are mandatory!</small>
+    </div>
+    <div class="mb-3">
+      <label for="desiredPosition" class="form-label">Desired Position</label>
+      <input type="text" class="form-control" [class.is-invalid]="desiredPositionInput.invalid && desiredPositionInput.touched" id="desiredPosition" name="desiredPosition" [(ngModel)]="applicant.desiredPosition" #desiredPositionInput="ngModel" required>
+      <small *ngIf="desiredPositionInput.invalid && desiredPositionInput.touched" class="text-danger">Desired position is mandatory!</small>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!applicantForm.valid">Submit</button>
+  </form>
+</div>

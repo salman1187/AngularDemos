@@ -1,0 +1,37 @@
+<div class="container mt-5">
+  <h2>Registration Form</h2>
+
+  <!-- {{employee | json}} -->
+  <div *ngIf="successMessage" class="alert alert-success mt-3">
+    Form submitted successfully!
+  </div>
+
+  <form (ngSubmit)="onSubmit()" #employeeForm="ngForm">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input type="text" class="form-control" [class.is-invalid]="nameInput.invalid && nameInput.touched" id="name" name="name" [(ngModel)]="employee.name" #nameInput="ngModel" required>
+      <small *ngIf="nameInput.invalid && nameInput.touched" class="text-danger">name is mandatory!</small>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label> 
+      <input type="email"  #emailInput = "ngModel" class="form-control" [class.is-invalid]="emailInput.invalid && emailInput.touched"  id="email" name="email" [(ngModel)]="employee.email" required email>
+      <div *ngIf="emailInput.invalid && emailInput.errors?.['email'] && emailInput.touched" class="text-danger">Invalid email format.</div>
+      <div *ngIf="emailInput.invalid && emailInput.errors?.['required'] && emailInput.touched" class="text-danger">Email is required.</div>
+    </div>
+    <div class="mb-3">
+      <label for="organization" class="form-label">Organization</label>
+      <input type="text" #orgInput="ngModel" class="form-control" [class.is-invalid]="orgInput.invalid && orgInput.touched"  id="organization" name="organization" [(ngModel)]="employee.organization" required>
+      <small *ngIf="orgInput.invalid && orgInput.touched" class="text-danger">Organization is mandatory!</small>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Workshops</label>
+      <div *ngFor="let workshop of workshops" class="form-check">
+        <input class="form-check-input" type="checkbox" id="{{workshop}}" name="workshops" [value]="workshop" 
+        [checked]="employee.workshops.includes(workshop)" (change)="toggleWorkshop($event, workshop)">
+        <label class="form-check-label" for="{{workshop}}">{{workshop}}</label>
+      </div>
+      <small *ngIf="employee.workshops.length == 0 && isDirty" class="text-danger">atleast one workshop is mandatory!</small>
+    </div>   
+    <button type="submit" class="btn btn-primary" [disabled]="!employeeForm.valid || employee.workshops.length == 0" >Submit</button>
+  </form>
+</div>

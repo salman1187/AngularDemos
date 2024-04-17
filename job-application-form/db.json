@@ -1,0 +1,12 @@
+{
+  "applicants": [
+    {
+      "id": 2,
+      "name": "Dhanush",
+      "email": "dhanush@kolaveri.com",
+      "phone": "+91-1234567890",
+      "skills": ".NET, Angular, Web API",
+      "desiredPosition": "Associate Software Developer"
+    }
+  ]
+}
