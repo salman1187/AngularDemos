@@ -1,0 +1,57 @@
+<div class="container mt-5">
+  <h2>Student Registration Form</h2>
+  <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+          <label for="rollno">Roll Number:</label>
+          <input type="text" class="form-control" id="rollno" formControlName="rollno" [class.is-invalid]="studentForm.get('rollno')?.invalid && studentForm.get('rollno')?.touched">
+          <!-- <small *ngIf="studentForm.get('rollno')?.invalid && studentForm.get('rollno')?.touched" class="text-danger">RollNo is mandatory!</small> -->
+          <small class="text-danger">{{rollNoErrorMsg}}</small>
+      </div>
+      <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" class="form-control" id="name" formControlName="name" [class.is-invalid]="studentForm.get('name')?.invalid && studentForm.get('name')?.touched">
+          <small *ngIf="studentForm.get('name')?.invalid && studentForm.get('name')?.touched" class="text-danger">Name is mandatory!</small>
+      </div>
+      <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="email" formControlName="email" [class.is-invalid]="studentForm.get('email')?.invalid && studentForm.get('email')?.touched">
+          <small *ngIf="studentForm.get('email')?.errors?.['required'] && studentForm.get('email')?.touched" class="text-danger">Email is mandatory!</small>
+          <small *ngIf="studentForm.get('email')?.errors?.['email'] && studentForm.get('email')?.touched" class="text-danger">Invalid email format!</small>
+      </div>
+      <div class="form-group">
+        <input class="form-check-input" type="checkbox" name="subscribe" formControlName="subscribe">
+        <label class="form-check-label" for="subscribe"> Subscribe to newsletter</label>
+      </div>
+
+      <div class="form-group">
+          <label for="mobile">Mobile:</label>
+          <input type="tel" class="form-control" [class.is-invalid]="studentForm.get('mobile')?.invalid && studentForm.get('mobile')?.touched" id="mobile" formControlName="mobile">
+          <small *ngIf="studentForm.get('mobile')?.invalid && studentForm.get('mobile')?.touched" class="text-danger">Name is mandatory!</small>
+      </div>
+      <div class="form-group">
+          <label for="gender">Gender:</label>
+          <select class="form-control" id="gender" formControlName="gender">
+              <option value="" disabled selected>--Select Gender--</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+          </select>
+      </div>
+
+      <div class="form-group" formArrayName="skills">
+        <label for="skill">Skill:</label>
+          <div *ngFor="let skill of Skills.controls; let i = index" class="d-flex align-items-center" [id]="'skill'+i">
+            <div>
+              <input type="text" class="form-control" [name]="i" [formControlName]="i">
+            </div>
+            <div class="ml-3">
+              <button class="btn btn-danger" (click)="deleteSkill(i)">Delete Skill</button>
+            </div>
+          </div>
+        
+        <div><button class="btn btn-success" (click)="addSkill()">Add Skill</button></div>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    {{Skills.value}}
+</div>

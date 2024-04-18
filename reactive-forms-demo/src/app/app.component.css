@@ -1,0 +1,18 @@
+
+/* Custom checkbox styling */
+.form-check-input {
+    width: 20px;
+    height: 20px;
+    margin: 4px;
+    /* Color settings */
+    border-color: #007bff; /* Blue */
+    border-radius: 3px;
+}
+
+
+
+
+/* Custom checkbox indicator (when checked) color */
+.form-check-input:checked + .form-check-label::before {
+    background-color: #fff; /* White */
+}
